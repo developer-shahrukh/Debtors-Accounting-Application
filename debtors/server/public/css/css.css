@@ -1,0 +1,31 @@
+.inputStyle
+{
+    width:70%;
+    height:1cm;
+    margin-top:5px;
+    margin-left:100px;
+    border:1px solid gray;
+    border-radius: 10px;
+    font-size: 14pt;
+    color:gray;
+}
+.inputHeading
+{
+    font-size: 12pt;
+    margin-left:50px;
+}
+.formGroup
+{
+    display:flex;
+    margin:10px;
+}
+.headingTitle
+{
+    font-size: 20pt;
+    margin-left:10px;
+}
+.bankIcon
+{
+    font-size:24pt;
+    margin-top:8px;
+}

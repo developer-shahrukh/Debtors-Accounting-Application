@@ -1,0 +1,166 @@
+.mainPanel
+{
+    width:100%;
+    height:90%;
+    border:2px solid gray;
+    display:flex;
+}
+.leftCustomerListPanel
+{
+    width:200px;
+    height:600px;
+    margin:10px;
+    border:2px solid black;
+    overflow:Scroll;
+}
+.rightCustomerDetailsPanel
+{
+    width:700px;
+    height:600px;
+    margin:10px;
+    border:2px solid black;
+    overflow:scroll;
+}
+.customerList
+{
+    list-style:none;
+}
+.icons
+{
+    font-size:24px;
+    float:right;
+    padding:5px;
+    cursor:pointer;    
+}
+.icons:hover
+{
+    color:orange;
+    background:white;
+}
+.customerHeadingList
+{
+    background:gray;
+    color:white;
+    margin:2px;
+    text-align: center;
+    border-radius: 10px;
+}
+.customerInformationPanel
+{
+    background:gray;
+    color:white;
+    margin:2px;
+    text-align:center;
+    border-radius:10px;
+}
+.stiky
+{
+    position:fixed;
+}
+.addCustomerButton
+{
+float:right;
+}
+.error
+{
+ color:red;
+ float:right;
+}  
+.modal-content
+{
+height:450px;
+overflow:scroll;
+}
+.nameOfList
+{
+cursor:pointer;
+font-weight: bold;
+font-size: 18px;
+border:1px solid gray;
+margin:2px;
+text-align: center;
+}
+.nameOfList:hover
+{
+    color:white;
+    background:orange;
+}
+.userImg
+{
+    color:black;
+    float:left;
+    padding:2px;
+    font-size: 20px;
+}
+
+.deleteCustomerHeading
+{
+    color:white;
+    background-color:gray;
+    width:280px;    
+    text-align:center;
+    border:1px solid black;
+    border-radius: 5px;  
+}
+#deleteMainDivision
+{
+    height:250px;
+    overflow:hidden;
+    margin-left:250px;
+    margin-top:200px;
+}
+.close
+{
+    cursor:pointer;
+    border:none;
+    float:right;
+    margin-top:-40px;
+}
+.delete-group
+{
+    font-weight:bold;
+    padding:1px;
+}
+#deleteCustomer
+{
+    float:right;
+}
+.customerModule
+{
+    float:right;
+}
+.notification
+{
+    display:none;
+    color:red;
+    position:absolute;
+    top:55%;
+    left:85%;
+    transform: translate(-50%,-50%);  
+    width:150px;
+    padding:5px;
+    text-align:center;
+    border:1px solid gray;
+    color:white;
+    background-color: rgb(45, 161, 45);      
+  }
+  .closeNotification
+  {
+    float:right;
+    cursor:pointer;
+    padding:5px;
+  }
+  .notificationForUpdate
+  {
+    color:red;
+    position:absolute;
+    top:55%;
+    left:85%;
+    transform: translate(-50%,-50%);  
+    width:150px;
+    padding:5px;
+    text-align:center;
+    border:1px solid gray;
+    color:black;
+    background-color: rgb(22, 43, 180);      
+  }

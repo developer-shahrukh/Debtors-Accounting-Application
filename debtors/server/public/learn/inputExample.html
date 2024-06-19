@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(()=>{
+            $("#click").click(function(){
+                var name=$("#itemName").val();
+                var city=$("#city").val();
+                var contact=$("#contact").val();
+                alert(name+","+city+","+contact);
+            });
+        });
+    </script>
+</head>
+<html>
+    <body>
+        Name <input type="text" id="itemName">
+        <br>
+        City <input type="text" id="city">
+        <br>
+        Contact <input type="text" id="contact">
+        <button type="button" id="click">Click Me</button>
+    </body>
+</html>

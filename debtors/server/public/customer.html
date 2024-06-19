@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- Meta, title, CSS, favicons, etc. -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Trader Settings</title>
+
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+   	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+	<!-- Bootstrap -->
+	<link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!-- NProgress -->
+	<link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+	<!-- iCheck -->
+	<link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+	<!-- bootstrap-wysiwyg -->
+	<link href="../vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+	<!-- Select2 -->
+	<link href="../vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+	<!-- Switchery -->
+	<link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+	<!-- starrr -->
+	<link href="../vendors/starrr/dist/starrr.css" rel="stylesheet">
+	<!-- bootstrap-daterangepicker -->
+	<link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+  <link href="css/customer.css" rel="stylesheet">
+	<script src="/js/customer.js"></script>
+	<!-- Custom Theme Style -->
+	<link href="build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+	<div class="container body">
+		<div class="main_container">
+			<div class="col-md-3 left_col">
+				<div class="left_col scroll-view">
+					<div class="navbar nav_title" style="border: 0;">
+						<a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>TM Debtors!</span></a>
+					</div>
+
+					<div class="clearfix"></div>
+
+					<!-- menu profile quick info -->
+					<div class="profile clearfix">
+						<div class="profile_pic">
+							<img src="images/img1.jpg" alt="..." class="img-circle profile_img">
+						</div>
+						<div class="profile_info">
+							<span>Welcome,</span>
+							<h2>Shahrukh Mansuri</h2>
+						</div>
+					</div>
+					<!-- /menu profile quick info -->
+
+					<br />
+
+					<!-- sidebar menu -->
+					<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+						<div class="menu_section">
+							<h3>General</h3>
+							<ul class="nav side-menu">
+								<li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="items.html">Items</a></li>
+										<li><a href="customer.html">Customers</a></li>
+										<li><a href="creditInvoiceAddForm.html">Invoice</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="menu_section">
+							<h3>ACCOUNTING</h3>
+							<ul class="nav side-menu">
+								<li><a><i class="fa fa-gear"></i> Settings <span class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="traderSettings.html">Trader</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+					<!-- /sidebar menu -->
+
+					<!-- /menu footer buttons -->
+					<div class="sidebar-footer hidden-small">
+						<a data-toggle="tooltip" data-placement="top" title="Settings">
+							<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+						</a>
+						<a data-toggle="tooltip" data-placement="top" title="FullScreen">
+							<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+						</a>
+						<a data-toggle="tooltip" data-placement="top" title="Lock">
+							<span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+						</a>
+						<a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+							<span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+						</a>
+					</div>
+					<!-- /menu footer buttons -->
+				</div>
+			</div>
+
+			<!-- top navigation -->
+			<div class="top_nav">
+				<div class="nav_menu">
+					<div class="nav toggle">
+						<a id="menu_toggle"><i class="fa fa-bars"></i></a>
+					</div>
+					<nav class="nav navbar-nav">
+						<ul class=" navbar-right">
+							<li class="nav-item dropdown open" style="padding-left: 15px;">
+								<a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+									<img src="images/img1.jpg" alt="">Shahrukh Mansuri
+								</a>
+								<div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="javascript:;"> Profile</a>
+									<a class="dropdown-item" href="javascript:;">
+										<span class="badge bg-red pull-right">50%</span>
+										<span>Settings</span>
+									</a>
+									<a class="dropdown-item" href="javascript:;">Help</a>
+									<a class="dropdown-item" href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+								</div>
+							</li>
+
+							<li role="presentation" class="nav-item dropdown open">
+								<a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
+									<i class="fa fa-envelope-o"></i>
+									<span class="badge bg-green">6</span>
+								</a>
+								<ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
+									<li class="nav-item">
+										<a class="dropdown-item">
+											<span class="image"><img src="images/img1.jpg" alt="Profile Image" /></span>
+											<span>
+												<span>John Smith</span>
+												<span class="time">3 mins ago</span>
+											</span>
+											<span class="message">
+												Film festivals used to be do-or-die moments for movie makers. They were where...
+											</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="dropdown-item">
+											<span class="image"><img src="images/img1.jpg" alt="Profile Image" /></span>
+											<span>
+												<span>John Smith</span>
+												<span class="time">3 mins ago</span>
+											</span>
+											<span class="message">
+												Film festivals used to be do-or-die moments for movie makers. They were where...
+											</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="dropdown-item">
+											<span class="image"><img src="images/img1.jpg" alt="Profile Image" /></span>
+											<span>
+												<span>John Smith</span>
+												<span class="time">3 mins ago</span>
+											</span>
+											<span class="message">
+												Film festivals used to be do-or-die moments for movie makers. They were where...
+											</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="dropdown-item">
+											<span class="image"><img src="images/img1.jpg" alt="Profile Image" /></span>
+											<span>
+												<span>John Smith</span>
+												<span class="time">3 mins ago</span>
+											</span>
+											<span class="message">
+												Film festivals used to be do-or-die moments for movie makers. They were where...
+											</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<div class="text-center">
+											<a class="dropdown-item">
+												<strong>See All Alerts</strong>
+												<i class="fa fa-angle-right"></i>
+											</a>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- /top navigation -->
+
+			<!-- page content -->
+			<div class="right_col" role="main">
+					<div class="page-title">
+						<div class="title_left">
+							<h3>Customer Information</h3>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 ">
+							<div class="x_panel">
+								<div class="x_title">
+									<i class="fa fa-user" style="font-size:24px;float:left;margin-right:5px;"></i><h2>Customer Details Panel</h2>
+									<button type="button" class="btn btn-primary addCustomerButton" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">+</button>
+
+									<!--Add Customer modal start here-->
+									<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal-dialog" role="document">
+										  <div class="modal-content">
+											<div class="modal-header">
+									  
+											  <h5 class="modal-title" id="exampleModalLabel">Add Customer</h5>
+											  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											  </button>
+											</div>
+											<div class="modal-body">
+											  <form id="addCustomerForm">
+												<div class="form-group">
+												  <label for="nameLabel" class="col-form-label">Name</label>
+												  <input type="text" class="form-control" id="name">
+												  <span class="error" style="color:red" id="nameError"></span>
+
+												  <label for="addressLabel" class="col-form-label">Address</label>
+												  <input type="text" class="form-control" id="address">
+												  <span class="error" style="color:red" id="addressError"></span>
+												  
+												  <label for="registration-title-1" class="col-form-label">Registration Title (1)</label>
+												  <input type="text" class="form-control" id="registration-title-1">
+												  <label for="registration-value-1" class="col-form-label">Registration Value (1) </label>
+												  <input type="text" class="form-control" id="registration-value-1">
+
+												  <label for="registration-title-2" class="col-form-label">Registration Title (2)</label>
+												  <input type="text" class="form-control" id="registration-title-2">
+												  <label for="registration-value-2" class="col-form-label">Registration Value (2) </label>
+												  <input type="text" class="form-control" id="registration-value-2">
+
+												  <label for="registration-title-3" class="col-form-label">Registration Title (3)</label>
+												  <input type="text" class="form-control" id="registration-title-3">
+												  <label for="registration-value-3" class="col-form-label">Registration Value (3) </label>
+												  <input type="text" class="form-control" id="registration-value-3">
+								
+												  <label for="contact-1" class="col-form-label">Contact (Phone)</label>
+												  <input type="text" class="form-control" id="contact-1">
+
+												  <label for="contact-2" class="col-form-label">Contact (Home)</label>
+												  <input type="text" class="form-control" id="contact-2">
+
+												  <label for="contact-3" class="col-form-label">Contact (Office)</label>
+												  <input type="text" class="form-control" id="contact-3">
+
+												  <label for="state" class="col-form-label">State</label>
+												  <select class="form-control" id="states">
+													
+												  </select>
+												</div>
+												<div class="modal-footer">
+													<button type="button" id="addNewCustomer" class="btn btn-primary">Add</button>
+													<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+												</div>           
+											</form>
+											</div>
+											
+										  </div>
+										</div>
+									  </div>
+									  <div class="notification" id="noticeBoard">
+										<b id="notification"></b>
+										<i class="fa fa-close closeNotification" id="closeNotification"></i>
+									  </div>
+									  <!-- Add Customer Modal ends here-->
+			<!--Delete Modal start here-->
+			
+	<div class="modal fade bd-example-modal-sm deleteModal" id="deleteMainDivision" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+ 		<div class="modal-dialog modal-sm">
+   			 <div class="modal-content">
+				<div class="deleteCustomerHeadingDivision">
+					<h3 class="deleteCustomerHeading">Delete Customer</h3>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+				</div>
+					<div class="delete-group">
+					<label for="customer-name">Customer Name :</label><span id="customerName"></span><br>
+					</div>
+					<div class="delete-group">
+					<label for="customer-address">Address :</label><span id="customerAddress"></span><br>
+					</div>
+					<div >
+						<button type="button" class="btn btn-primary" id="deleteCustomer">Delete</button>
+					</div>
+   			 </div>
+  		</div>
+	</div>
+
+			
+			<!--Delete Modal ends here-->
+									<div class="clearfix"></div>
+								</div>
+                <div class="mainPanel">
+                <div class="leftCustomerListPanel">
+                  <h5 class="customerHeadingList">Customer List</h5>
+                  <div class="customerList" id="leftSideListContent">
+                    
+				  </div>
+                </div>
+                <div class="rightCustomerDetailsPanel">
+                  <div><h3 class="customerInformationPanel">Customer Details</h3></div>
+                  <div class="customerModule">
+                    <i id="editCustomerIcon" class="fa fa-edit icons"></i>
+					<span data-toggle="modal" data-target=".bd-example-modal-sm"><i id="deleteCustomerIcon" class="fa fa-trash icons"></i></span>
+                  </div>
+								<div class="x_content">
+									<br />
+									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="name">Name<span class="required">*</span></label>
+											<div class="col-md-6 col-sm-6 ">
+												<input type="text" id="nameDetails" required="required" class="form-control ">
+											</div>
+										</div>
+
+
+										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="address">Address <span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6 ">
+												<input type="text" id="addressDetails" name="address" required="required" class="form-control">
+											</div>
+										</div>
+
+										<div class="item form-group">
+											<label for="registration-title-1" class="col-form-label col-md-3 col-sm-3 label-align">Registration Title (1)</label>
+											<div class="col-md-6 col-sm-6 ">
+												<input id="registration-title-1-details" class="form-control" type="text" name="registration-title-1">
+											</div>
+										</div>
+
+										<div class="item form-group">
+											<label for="registration-value-1" class="col-form-label col-md-3 col-sm-3 label-align">Registration Value (1)</label>
+											<div class="col-md-6 col-sm-6 ">
+												<input id="registration-value-1-details" class="form-control" type="text" name="registration-value-1">
+											</div>
+										</div>
+
+										<div class="item form-group">
+											<label for="registration-title-2" class="col-form-label col-md-3 col-sm-3 label-align">Registration Title (2)</label>
+											<div class="col-md-6 col-sm-6 ">
+												<input id="registration-title-2-details" class="form-control" type="text" name="registration-title-2">
+											</div>
+										</div>
+
+										<div class="item form-group">
+											<label for="registration-value-2" class="col-form-label col-md-3 col-sm-3 label-align">Registration Value (2)</label>
+											<div class="col-md-6 col-sm-6 ">
+												<input id="registration-value-2-details" class="form-control" type="text" name="registration-value-2">
+											</div>
+										</div>
+
+										<div class="item form-group">
+											<label for="registration-title-3" class="col-form-label col-md-3 col-sm-3 label-align">Registration Title (3)</label>
+											<div class="col-md-6 col-sm-6 ">
+												<input id="registration-title-3-details" class="form-control" type="text" name="registration-title-3">
+											</div>
+										</div>
+
+										<div class="item form-group">
+											<label for="registration-value-3" class="col-form-label col-md-3 col-sm-3 label-align">Registration Value (3)</label>
+											<div class="col-md-6 col-sm-6 ">
+												<input id="registration-value-3-details" class="form-control" type="text" name="registration-value-3">
+											</div>
+										</div>
+
+										<div class="item form-group">
+											<label for="contact-number-1" class="col-form-label col-md-3 col-sm-3 label-align">Contact Number (1)</label>
+											<div class="col-md-6 col-sm-6 ">
+												<input id="contact-number-1-details" class="form-control" type="text" name="contact-number-1">
+											</div>
+										</div>
+
+										<div class="item form-group">
+											<label for="contact-number-2" class="col-form-label col-md-3 col-sm-3 label-align">Contact Number (2)</label>
+											<div class="col-md-6 col-sm-6 ">
+												<input id="contact-number-2-details" class="form-control" type="text" name="contact-number-2">
+											</div>
+										</div>
+
+										<div class="item form-group">
+											<label for="contact-number-2" class="col-form-label col-md-3 col-sm-3 label-align">Contact Number (2)</label>
+											<div class="col-md-6 col-sm-6 ">
+												<input id="contact-number-3-details" class="form-control" type="text" name="contact-number-2">
+											</div>
+										</div>
+
+										<div class="item form-group">
+											<label for="state" class="col-form-label col-md-3 col-sm-3 label-align">State </label>
+											<div class="col-md-6 col-sm-6 ">
+												<select id="stateDetails" class="form-control" name="states">
+												</select>
+											</div>
+										</div>
+
+                    					<div class="ln_solid"></div>
+										<div class="item form-group">
+											<div class="col-md-6 col-sm-6 offset-md-3">
+												<button type="button" class="btn btn-primary" id="updateCustomer">Update</button>
+											</div>
+										</div>
+
+									</form>
+								</div>
+                </div>
+                </div>
+							</div>
+						</div>
+					</div>
+			</div>
+			
+			<!-- /page content -->
+
+			<!-- footer content -->
+			<footer>
+				<div class="pull-right">
+					Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+				</div>
+				<div class="clearfix"></div>
+			</footer>
+			<!-- /footer content -->
+		</div>
+	</div>
+
+	<!-- jQuery -->
+	<script src="../vendors/jquery/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- FastClick -->
+	<script src="../vendors/fastclick/lib/fastclick.js"></script>
+	<!-- NProgress -->
+	<script src="../vendors/nprogress/nprogress.js"></script>
+	<!-- bootstrap-progressbar -->
+	<script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+	<!-- iCheck -->
+	<script src="../vendors/iCheck/icheck.min.js"></script>
+	<!-- bootstrap-daterangepicker -->
+	<script src="../vendors/moment/min/moment.min.js"></script>
+	<script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+	<!-- bootstrap-wysiwyg -->
+	<script src="../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+	<script src="../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+	<script src="../vendors/google-code-prettify/src/prettify.js"></script>
+	<!-- jQuery Tags Input -->
+	<script src="../vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+	<!-- Switchery -->
+	<script src="../vendors/switchery/dist/switchery.min.js"></script>
+	<!-- Select2 -->
+	<script src="../vendors/select2/dist/js/select2.full.min.js"></script>
+	<!-- Parsley -->
+	<script src="../vendors/parsleyjs/dist/parsley.min.js"></script>
+	<!-- Autosize -->
+	<script src="../vendors/autosize/dist/autosize.min.js"></script>
+	<!-- jQuery autocomplete -->
+	<script src="../vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+	<!-- starrr -->
+	<script src="../vendors/starrr/dist/starrr.js"></script>
+	<!-- Custom Theme Scripts -->
+	<script src="../build/js/custom.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+	
+
+<script>
+class CustomerModel
+{
+	constructor()
+	{
+		this.customers=[];
+		this.states=[];
+		this.customerNameBeforeEdit="";
+	}
+}
+var model=new CustomerModel();
+const updateCustomersList=()=>{
+	$(".customerList").empty();
+	model.customers.forEach((customer)=>{
+		$(".customerList").append(`<div class='nameOfList' id='${customer.code}'><i class='fa fa-user userImg'></i>${customer.name}</div>`);
+	});
+}
+		
+const deleteCustomerInArray=(customerName)=>{
+	model.customers=model.customers.filter(customer=> customer.name!=customerName);
+}
+
+
+$(()=>{				
+	getCustomers().then((customers)=>{
+		customers.forEach((customer)=>{
+			model.customers.push(customer);
+		});
+		updateCustomersList();
+	}); // getCustomers ends here
+
+	getStates().then((states)=>{
+		states.forEach((state)=>{
+			model.states.push(state);
+			$("#states").append(`<option id='${state.code}'>${state.name}</option>`);
+		});
+	}); // getStates ends here
+
+	$("#demo-form2 :input").prop("disabled",true);
+ 	$(".customerList").on("click", ".nameOfList", function() {
+       	var code=$(this).attr("id");
+		getCustomerByCode(code).then((customerData)=>{
+			customerData.forEach((customer)=>{
+				//console.log(customer.name);
+				fillTheCustomerForm(customer);
+				$("#demo-form2 :input").prop("disabled",true);
+			});	
+			$("#editCustomerIcon").click(function(){
+				model.customerNameBeforeEdit=$("#nameDetails").val().trim();
+				$("#demo-form2 :input").prop("disabled",false);
+				getStates().then((states)=>{
+					states.forEach((state)=>{
+						if (stateCodeGlobal==state.code) $("#stateDetails").append(`<option id='${state.code}' selected>${state.name}</option>`);
+						else $("#stateDetails").append(`<option id='${state.code}'>${state.name}</option>`);
+					});
+				});
+				$("#updateCustomer").click(function(){
+					var customerData=getCustomerData();
+					$.ajax({
+           				url : "/updateCustomer",
+          				type:  "POST",            
+          				contentType: "application/json",
+                        data: JSON.stringify(customerData),
+                        success: function(response){
+                           // alert('Update Done');
+						   if(response.error)
+						   {
+
+						   }
+						   else
+						   {
+							$("#noticeBoard").addClass('notificationForUpdated');
+								$("#notification").text("Customer Updated");
+								$("#noticeBoard").fadeIn();
+								$("#demo-form2 :input").prop("disabled",true);
+								$("#deleteMainDivision").modal('hide');
+								var index=model.customers.findIndex(c=>c.code==code);
+								if(index!=-1) model.customers.splice(index,1);
+								model.customers.push(customerData);
+								updateCustomersList();
+								setTimeout(function(){
+                   			 		$("#noticeBoard").fadeOut();
+                		  		},400);
+						   }
+                        },
+                        failure: function(error){
+                            alert(error);
+                        }
+                    });
+				});
+			}); // editCustomerList ends here
+				
+			$("#deleteCustomerIcon").click(function(){
+				var customerData=getCustomerData();
+				//console.log(customerData.name);
+				var customerName=customerData.name;
+				$("#customerName").text(customerName);
+				$("#customerAddress").text(customerData.address);
+				$("#deleteCustomer").click(function(){
+					$.ajax({
+						type: "GET",
+						url: "/removeCustomer",
+						contentType: "application/json",
+						data: ({name:customerName}),
+						success: function(response){
+							if(response.error)
+							{
+								alert(response.error);
+							}
+							else
+							{
+								$("#notification").text("Customer Deleted");
+								deleteCustomerInArray(customerName);
+								clearCustomerDetailsForm();
+								$("#noticeBoard").fadeIn();
+								$("#deleteMainDivision").modal('hide');
+								$("#demo-form2 :input").prop("disabled",true);
+								updateCustomersList();
+								setTimeout(function(){
+                   			 		$("#noticeBoard").fadeOut();
+                		  		},4000);
+							}
+						},
+						error: function(error){
+							alert(error);
+						}
+					});
+				})
+			})
+		});
+		
+		});
+		
+
+			var ref=$(".customerList select");
+			$("#addCustomerForm").validate();
+			$(":input").on('input',function(){
+				var name=$("#name").val();
+				if(name.length>0)
+				{
+					$("#nameError").html("");
+					//return;
+				}
+				var address=$("#address").val();
+				if(address.length>0) $("#addressError").html("");
+			});
+			$("#addNewCustomer").click(function(){
+				//alert('click');
+				clearErrors();
+				var name=$("#name").val().trim();
+				var errorCount=0;
+				if(name.length==0)
+				{
+					$("#nameError").html("Name is required");
+					$("#name").val("");
+					$("#name").focus();	
+					errorCount++;
+				}
+				var address=$("#address").val();
+				if(address.length==0)
+				{
+					$("#addressError").html("Address is required");
+					$("address").val("");
+					if(name.length==0) $("#name").focus();
+					else $("#address").focus();
+					errorCount++;
+				}
+				var regTitle1=$("#registration-title-1").val();
+				var regValue1=$("#registration-value-1").val();
+				var regTitle2=$("#registration-title-2").val();
+				var regValue2=$("#registration-value-2").val();
+				var regTitle3=$("#registration-title-3").val();
+				var regValue3=$("#registration-value-3").val();
+				var contact1=$("#contact-1").val();
+				var contact2=$("#contact-2").val();
+				var contact3=$("#contact-3").val();
+				if(regTitle1.trim().length==0) regTitle1="";
+				if(regValue1.trim().length==0) regValue1="";
+				if(regTitle2.trim().length==0) regTitle2="";
+				if(regValue2.trim().length==0) regValue2="";
+				if(regTitle3.trim().length==0) regTitle3="";
+				if(regValue3.trim().length==0) regValue3="";
+				if(contact1.trim().length==0) contact1="";
+				if(contact2.trim().length==0) contact2="";
+				if(contact3.trim().length==0) contact3="";
+				var stateCode=$("#states").find(":selected").attr("id");
+				//console.log(stateCode);
+				if(errorCount>0) return;
+				//alert(regTitle1+","+regValue1+",sss"+regTitle2+","+regValue2+","+regTitle3+","+regValue3);
+				//alert(contact1+","+contact2+","+contact3);
+				//alert(stateCode);
+				var customerData={
+					"name": name,
+					"address": address,
+					"regTitle1": regTitle1,
+					"regValue1": regValue1,
+					"regTitle2": regTitle2,
+					"regValue2": regValue2,
+					"regTitle3": regTitle3,
+					"regValue3": regValue3,
+					"contact1": contact1,
+					"contact2": contact2,
+					"contact3": contact3,
+					"stateCode": stateCode
+				};
+				//console.log(customerData);
+				$.ajax({
+					url : "/addCustomer",
+					type : "POST",
+					contentType: "application/json",
+					data: JSON.stringify(customerData),
+					success: function(response){
+						if(response.error)
+						{
+							alert('Some problem');
+						}
+						else
+						{
+							customerData.code=response.code;
+							//console.log(customerData);
+							model.customers.push(customerData);
+						updateCustomersList();
+						clearAddCustomerForm();
+						$("#notification").text("Customer Added");
+						$("#noticeBoard").fadeIn();
+						$("#exampleModal").modal('hide');
+						setTimeout(function(){
+                   			 $("#noticeBoard").fadeOut();
+                		  },4000);
+						}
+					},
+					failure: function(error){
+						alert('Some problem');
+					}
+				});
+			});
+
+
+}); // document loaded ends here
+		
+		
+</script>
+
+
+</body>
+</html>
+

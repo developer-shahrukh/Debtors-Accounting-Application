@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Debtors Accounting</title>
+    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+
+
+
+    <!--This the add items link starts here-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+    
+    <!--This the add items link ends here-->
+    <!-- Bootstrap -->
+    <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- Datatables -->
+    
+    <link href="vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="css/addForm.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    
+
+    <script src="js/addForm.js"></script>
+    <script src="js/main.js"></script>
+    
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Thinking Debtors</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img1.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Shahrukh Mansuri</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="items.html">Items</a></li>
+                      <li><a href="customer.html">Customers</a></li>
+                      <li><a href="creditInvoiceAddForm.html">Invoice</a></li>
+                    </ul>
+                  </li>
+                  
+                </ul>
+              </div>
+              <div class="menu_section">
+                <h3>ACCOUNTING</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-gear"></i> Settings <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="traderSettings.html">Traders</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <div class="nav toggle">
+                  <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                </div>
+                <nav class="nav navbar-nav">
+                <ul class=" navbar-right">
+                  <li class="nav-item dropdown open" style="padding-left: 15px;">
+                    <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                      <img src="images/img1.jpg" alt="">Shahrukh Mansuri
+                    </a>
+                    <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item"  href="javascript:;"> Profile</a>
+                        <a class="dropdown-item"  href="javascript:;">
+                          <span class="badge bg-red pull-right">50%</span>
+                          <span>Settings</span>
+                        </a>
+                    <a class="dropdown-item"  href="javascript:;">Help</a>
+                      <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                    </div>
+                  </li>
+  
+                  <li role="presentation" class="nav-item dropdown open">
+                    <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
+                      <i class="fa fa-envelope-o"></i>
+                      <span class="badge bg-green">6</span>
+                    </a>
+                    <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
+                      <li class="nav-item">
+                        <a class="dropdown-item">
+                          <span class="image"><img src="images/img1.jpg" alt="Profile Image" /></span>
+                          <span>
+                            <span>John Smith</span>
+                            <span class="time">3 mins ago</span>
+                          </span>
+                          <span class="message">
+                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                          </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="dropdown-item">
+                          <span class="image"><img src="images/img1.jpg" alt="Profile Image" /></span>
+                          <span>
+                            <span>John Smith</span>
+                            <span class="time">3 mins ago</span>
+                          </span>
+                          <span class="message">
+                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                          </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="dropdown-item">
+                          <span class="image"><img src="images/img1.jpg" alt="Profile Image" /></span>
+                          <span>
+                            <span>John Smith</span>
+                            <span class="time">3 mins ago</span>
+                          </span>
+                          <span class="message">
+                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                          </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="dropdown-item">
+                          <span class="image"><img src="images/img1.jpg" alt="Profile Image" /></span>
+                          <span>
+                            <span>John Smith</span>
+                            <span class="time">3 mins ago</span>
+                          </span>
+                          <span class="message">
+                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                          </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <div class="text-center">
+                          <a class="dropdown-item">
+                            <strong>See All Alerts</strong>
+                            <i class="fa fa-angle-right"></i>
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Thinking Debtors<small> to manage accounting</small></h3>
+              </div>
+
+              
+            </div>
+            
+            <div class="clearfix"></div>
+
+            <button type="button" class="btn btn-primary addButton">+</button>
+                          <table id="itemTable" class="table table-striped table-bordered" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>S.No</th>
+                                <th>Item Code</th>
+                                <th>Item Name</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                          </table>
+                          <!--Unit Of Measurements List start here-->
+                          <div class="detailsPanel">
+                            <div class="mainDetailsContainer">
+                              <div class="leftContainer">
+                                <h3 class="detailsHeading">Item Details</h3>
+                                <div class="leftDetailsData">
+                                  <label id="name" style="margin:5px;">Item Name :</label><br>
+                                  <label id="hsnCode" style="margin:5px">HSN Code :</label><br>
+                                  <label id="cgst" style="margin:5px">CGST :</label><br>
+                                  <label id="sgst" style="margin:5px">SGST :</label><br>
+                                  <label id="igst" style="margin:5px">IGST :</label><br>
+                                </div>
+                              </div>
+                              <div class="rightContainer">
+                                <h3 class="detailsHeading">Unit Of Measurements</h3>
+                                <div class="rightDetailsData">
+                                  <ul class="listUom" id="unitOfMeasurementsList"></ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                                      
+                          <!--Unit Of Measurements List ends here-->
+                          <!--Add modal start here-->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                          
+                                  <h5 class="modal-title" id="exampleModalLabel">Add Item</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <form id="addItemForm">
+                                    <div class="form-group">
+                                      
+                                      <label for="item-name" class="col-form-label">Item Name</label>
+                                      <input type="text" class="form-control" id="item-name">
+                                      <span class="error" id="nameError"></span>
+
+                                      <label for="hsn-code" class="col-form-label">HSN Code</label>
+                                      <input type="number" class="form-control" id="hsn-code">
+                                      <span class="error" id="hsnCodeError"></span>
+
+                                      <label for="cgst" class="col-form-label">CGST</label>
+                                      <input type="number" class="form-control" id="item-cgst">
+                                      <span class="error" id="cgstError"></span>
+
+                                      <label for="sgst" class="col-form-label">SGST</label>
+                                      <input type="number" class="form-control" id="item-sgst">
+                                      <span class="error" id="sgstError"></span>
+
+                                      <label for="igst" class="col-form-label">IGST</label>
+                                      <input type="number" class="form-control" id="item-igst">
+                                      <span class="error" id="igstError"></span>
+                                    </div>
+                                  </form>
+                                </div>
+                    
+                                <div class="container">
+                                  <div class="row">
+                                    <div ><h1 class='heading'>Unit Of Measurements</h1><br>
+                                      <div ><span id="uomErrorSection"></span></div>
+                                      <span id="selectFrom">Select From</span>
+                                      <span id="selectTo">Selected</span>
+                                    </div>
+                                    
+                                    <div class="col-sm1" id="selectItem">
+                                      <ul id="select" class="list">
+                                        
+                                      </ul>
+                                    </div>
+                                    <div class="col">
+                                      <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                        <button id="rightButton" type="button" class="btn btn-primary btt">&gt;</button><br>
+                                        <button id="leftButton" type="button" class="btn btn-primary btt">&lt;</button>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm1 sm2">
+                                    <ul id="unitOfMeasurements" class="list">
+
+                                    </ul>
+                                    </div>
+                                    
+                                  </div>
+                                  <div>
+                                  <span style="color:red;margin-left:10px" id="uomAddError"></span><br>
+                                  <label for="UOM">UOM</label>
+                                  <input type="text" class="addUom" id="addUom">
+                                  <button type="button" id="addUomButton" class="btn btn-primary">+</button>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary" id="addData">Add</button>
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>            
+                              </div>
+                            </div>
+                          </div>
+                      
+                          <!-- Add Modal ends here-->
+
+                          <!--/Unit Of Measurements List ends here-->
+                          <!--Delte Item start here-->
+                          <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="deleteModalLabel">Delete Item</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <label for="name" id="nameDelete">Name :</label>
+                                  <label for="code" id="hsnCodeDelete">HSN Code :</label><br>
+                                  <label for="code" id="codeDelete">Code :</label><br>
+                                  <label for="cgst" id="cgstDelete">CGST :</label><br>
+                                  <label for="sgst" id="sgstDelete">SGST :</label><br>
+                                  <label for="igst" id="igstDelete">IGST :</label><br>
+                                  <label for="unitOfMeasurements" id="unitOfMeasurements">Unit of Measurements :</label>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary" onClick='deleteItemClickHandler()'>Delete</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <!--Delete Item ends here-->
+                            <div class="notification" id="noticeBoard">
+                              <b id="notification">Item Added</b>
+                              <i class="fa fa-close closeNotification" id="closeNotification"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+        
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Debtors Accounting Application <a href="https://colorlib.com"></a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+   <script src="vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="vendors/nprogress/nprogress.js"></script>
+    <!-- iCheck -->
+    <script src="vendors/iCheck/icheck.min.js"></script>
+    <!-- Datatables -->
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="vendors/jszip/dist/jszip.min.js"></script>
+    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="build/js/custom.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    
+
+  </body>
+</html>

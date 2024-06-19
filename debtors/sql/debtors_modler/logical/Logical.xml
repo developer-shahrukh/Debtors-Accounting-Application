@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="0AB4A316-89F5-F5F7-DC64-4599B6521151" mainViewID="DCA1A115-A36F-9678-F180-F621428A21A8">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 08:53:17 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

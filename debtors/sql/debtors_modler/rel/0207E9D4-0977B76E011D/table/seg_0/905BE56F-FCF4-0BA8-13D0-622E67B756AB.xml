@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="905BE56F-FCF4-0BA8-13D0-622E67B756AB" name="ac_item">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:03:27 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="code" id="D0F92F33-276B-8944-7AC9-D4F23AA4BCC8">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:04:18 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="29EE2F84-BDD5-C7E7-065B-4AFB0F76468B">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:04:18 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="65140972-081C-F931-585D-80BBDD905C78" name="ac_uom_PKv1">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:04:18 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D0F92F33-276B-8944-7AC9-D4F23AA4BCC8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="304EBAAD-B8FA-EB0D-BF54-4022EF267ADD" name="ac_uom__UNv1">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:05:08 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="29EE2F84-BDD5-C7E7-065B-4AFB0F76468B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

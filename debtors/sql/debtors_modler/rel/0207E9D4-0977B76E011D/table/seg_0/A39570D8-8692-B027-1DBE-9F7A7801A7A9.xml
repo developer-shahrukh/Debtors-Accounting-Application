@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A39570D8-8692-B027-1DBE-9F7A7801A7A9" name="ac_item_uom">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:16:08 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="item_code" id="CB0C6729-C71F-81EF-359D-F3C62243329E">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:19:29 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="048A3101-A1D2-B710-756C-1F57E70B226C" referredColumn="D0F92F33-276B-8944-7AC9-D4F23AA4BCC8"/>
+</associations>
+</Column>
+<Column name="uom_code" id="E24F8135-AAC5-B8DF-F613-696BD2F51E08">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:19:29 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C35B8466-88C8-6C47-C4EB-9081915CAA23" referredColumn="EF66FC37-4217-955E-34A0-A5D296966D35"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0669F64A-2E5B-8096-AB6C-FF6937F2FA10" name="ac_item_uom_PK">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:19:29 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CB0C6729-C71F-81EF-359D-F3C62243329E"/>
+<colUsage columnID="E24F8135-AAC5-B8DF-F613-696BD2F51E08"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CED5ADD4-FA44-3B45-4DF8-B414A59B5B87" name="ac_item_uom_ac_item_FK">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:19:29 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CB0C6729-C71F-81EF-359D-F3C62243329E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A95A0AB-6282-A684-C248-490803BB0218" name="ac_item_uom_ac_uom_FK">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:20:26 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E24F8135-AAC5-B8DF-F613-696BD2F51E08"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="048A3101-A1D2-B710-756C-1F57E70B226C" containerWithKeyObject="A39570D8-8692-B027-1DBE-9F7A7801A7A9" localFKIndex="CED5ADD4-FA44-3B45-4DF8-B414A59B5B87" name="ac_item_uom_ac_item_FK">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:19:29 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<referredTableLongName>ac_item</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>905BE56F-FCF4-0BA8-13D0-622E67B756AB</referredTableID>
+<keyObject>65140972-081C-F931-585D-80BBDD905C78</keyObject>
+<referredKeyID>65140972-081C-F931-585D-80BBDD905C78</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>code</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

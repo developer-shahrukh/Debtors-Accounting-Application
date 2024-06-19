@@ -1,0 +1,93 @@
+.itemMainContainer
+     {
+        width:500px;
+        height:700px;
+        border:1px solid black;
+        margin-left:20%;
+        padding:10px;
+        overflow:scroll;
+        display:none;
+     }
+     .itemHeading
+     {
+        color:white;
+        background:gray;
+        text-align: center;
+     }
+     .error
+     {
+        color:red;
+        float:right;
+     }
+     
+     input 
+     {
+        border:2px solid gray;
+        width:50%;
+     }
+     .uomMainContainer
+     {
+        border:1px solid hsl(0, 85%, 47%);
+        width:380px;
+        height:300px;
+        margin:10px;
+        margin-left:30px;
+        margin-right:60px;
+     }
+     .uomInnerContainer
+     {
+        display:flex;
+     }
+     .leftUomContainer
+     {
+        border:1px solid black;
+        width:130px;
+        height:220px;
+        margin:5px;
+        margin-left:40px;
+     }
+     .rightUomContainer
+     {
+        border:1px solid black;
+        width:130px;
+        height:220px;
+        margin:5px;
+     }
+     .uomButton
+     {
+        margin-top:70px;
+        margin-left:10px;
+        margin-right:10px;
+     }
+     .list
+     {
+        list-style: none;
+        text-align: center;
+        cursor:pointer;
+     }
+     .uomInputBar
+     {
+
+        margin-left:40px;
+     }
+     .buttons
+     {
+        float:right;
+        margin:5px;
+     }
+     list li:hover
+     {
+        color:white;
+        background:orange;
+     }
+     .ui-selected
+     {
+        color:white;
+        background-color: orange;;
+     }
+     .selectHeading
+     {
+        color:orange;
+        font-weight: bold;
+        margin:60px;
+     }

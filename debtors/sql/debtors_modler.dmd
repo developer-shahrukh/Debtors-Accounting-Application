@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="debtors_modler" id="22D02B75-E69F-1753-1A95-E0580DFE56E8" version="3.5">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 08:53:16 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>22D02B75-E69F-1753-1A95-E0580DFE56E8</designId>
+</OSDM_Design>

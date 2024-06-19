@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="03FAC1CB-9827-8FDF-1AF7-9B3E2A09ED1A" name="ac_item_tax">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:20:55 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<ordsAlias>table_10</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="item_code" id="1F946742-4117-4EB2-409C-886232585C63">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:22:22 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1C402BD6-8A9C-A70C-1E84-E12CF88E177F" referredColumn="D0F92F33-276B-8944-7AC9-D4F23AA4BCC8"/>
+</associations>
+</Column>
+<Column name="cgst" id="6516E629-DD7B-9C07-BDFC-E6AA1329975B">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:24:38 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sgst" id="2AC5B426-0B4B-02E6-52C7-B64233F93C6F">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:24:38 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="igst" id="9C35B7D3-F3B5-A984-D6CB-83DE8538C964">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:24:38 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7AA433C1-136F-3974-9D2D-A51750B02665" name="ac_item_tax_PK">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:22:22 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1F946742-4117-4EB2-409C-886232585C63"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6EA0C0B0-8B01-F058-DC82-E7AF3DA66A21" name="ac_item_tax_ac_item_FK">
+<createdBy>hp</createdBy>
+<createdTime>2024-03-17 09:25:25 UTC</createdTime>
+<ownerDesignName>debtors_modler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1F946742-4117-4EB2-409C-886232585C63"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/jquery-3.7.1.min.js"></script>
+   
+    <link rel='stylesheet' href='js/jquery-ui-1.13.2/jquery-ui.min.css'>
+    <script src='js/jquery-ui-1.13.2/jquery-ui.js'></script>
+
+    <script src="jquery-validation-1.19.5/jquery.validate.min.js"></script>
+   
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <style>
+    .uom
+    {
+    text-align: center;
+    background-color: black;
+    width: 50%;
+    color: whitesmoke;
+    margin-left: 150px;
+    border-radius: 10px;
+    font-size: 2rem;
+    }
+.container {
+    display:  flex;
+    margin: 35px;
+    margin-left: 3cm;
+}
+.left-section {
+    height: 4.5cm;
+    width: 4cm;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+}
+.left-section::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+.right-section  {
+    width: 4cm;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+}
+.right-section::-webkit-scrollbar {
+    width: 0;
+    background : transparent;
+}
+.right-arrow {
+    margin-top: 35px;
+    font-size: 3rem;
+    margin-left: 10px;
+}
+.left-arrow {
+    margin-top: 84px;
+    font-size: 3rem;
+    margin-right: 10px;
+}
+.left-arrow:hover,.right-arrow:hover {
+    color: orange;
+    cursor: pointer;
+}
+.list {
+    list-style: none;
+    font-size: 1.8rem;
+    margin-right: 35px;
+    margin-top: 10px;
+    cursor: pointer;    
+    text-align: center;
+}
+    </style>
+<script>
+$(()=>{
+        $(".right-arrow").click(function(){
+          var selectedData=$("#select .ui-selected");
+          if(selectedData.length > 0) {
+            selectedData.each(function(){
+              $("#unitOfMeasurements").append($(this).clone());
+              $(this).remove();
+            });
+          }
+        });
+        $(".left-arrow").click(function(){
+          var rightData=$("#unitOfMeasurements .ui-selected");
+          if(rightData.length > 0) {
+            rightData.each(function(){
+              $("#select").append($(this).clone());
+              $(ui.selected).addClass("ui-selected").siblings().removeClass("ui-selected");
+              $(this).remove();
+            });
+          }
+        });
+      });
+      var sel=$("#select");
+      sel.selectable({
+      selected : function(ev,ui){
+        var selectedItem=$('ui.selected');
+        var itemName=selectedItem.text();
+        var itemCode=selectedItem.data('code');
+        //alert(itemCode,itemName);
+        $(ui.selected).addClass("ui-selected").siblings().removeClass("ui-selected");
+      }
+    });
+    var right=$("#unitOfMeasurements");
+    right.selectable({
+      selected : function(ev,ui) {
+        $(ui.selected).addClass("ui-selected").siblings().removeClass("ui-selected");
+        //alert(ev.target.id);
+      }
+    });
+
+
+
+$(".saveData").click(function(){
+    $("#nameErrorSection").html("");
+    $("#igstErrorSection").html("");
+    $("#cgstErrorSection").html("");
+    $("#sgstErrorSection").html("");
+    //$(".right-section ul").html("");
+    var name=$("#name").val();
+    var igst=$("#igst").val();
+    var cgst=$("#cgst").val();
+    var sgst=$("#sgst").val();
+    //var unitOfMeasurements=$("#unitOfMeasurements").val();
+    var selectedItems=$("#unitOfMeasurements .ui-selected").map(function(){
+        var itemName=$(this).text();
+        var itemCode=$(this).data('code');
+        return {name :itemName,code : itemCode};
+    }).get();
+    if(name.length <=0) {
+        $("#nameErrorSection").text('Name Should Be Empty ');
+    }                
+    if(name.length >= 25) {
+        $("#nameErrorSection").text('Item Name Should Not Be Greater Than 25 Characters.');
+    }
+    if(igst.length <=0 ) {
+        $("#igstErrorSection").text('IGST should be less than zero');
+    }
+    if(igst.length >= 6 ) {
+        $("#igstErrorSection").text('IGST should be Greater than 3 Digits.');
+    }
+    if(cgst.length <=0 ) {
+        $("#cgstErrorSection").text('CGST should be less than zero');
+    }
+    if(cgst.length >= 6 ) {
+        $("#cgstErrorSection").text('CGST should be Greater than 3 Digits.');
+    }
+    if(sgst.length <=0 ) {
+        $("#sgstErrorSection").text('SGST should be less than zero');
+    }
+    if(sgst.length >= 6 ) {
+        $("#sgstErrorSection").text('SGST should be Greater than 3 Digits.');
+    }
+    var rightSide=$(".right-section ul");
+    if(rightSide.find("li").length===0) {
+        alert('Please Select UnitOfMeasurements. ');
+    }
+    var itemData={
+        name : name,
+        igst : igst,
+        sgst : sgst,
+        cgst :cgst,
+        unitOfMeasurements : selectedItems
+    };
+    $.ajax({
+        type : 'POST',
+        url : '/addItems',
+        contentType : 'application/json',
+        data : JSON.stringify({itemData : itemData}),
+        success : function(response) {
+            if(response.error) {
+                alert('error');
+            }
+            else {
+                $("#addModalOpen").modal('hide');
+                alert('Success');
+                $("#successPopup").fadeIn();
+                setTimeout(function(){
+                    $("#successPopup").fadeOut();
+                },4000);
+            }
+        },error : function(error) {
+            console.log(error);
+        }
+    });
+});
+</script>
+</head>
+<body>
+   <div class="uom">Unit Of Measurement</div>
+                <div class="container">
+                  <div class="left-section">
+                    <ul class="list" id="select" aria-multiselectable="true">
+                      <li data-code="1">Kg</li>
+                      <li data-code="2">Ltr</li>
+                      <li data-code="3">gram</li>
+                      <li data-code="4">Pcs</li>
+                      <li data-code="5">cm</li>
+                      <li data-code="6">Pack</li>
+                      <li data-code="7">mm</li>
+                      <li data-code="8">Ton</li>
+                    </ul>
+                  </div>  
+                  <button type="button" class="right-arrow">&gt;</button>
+                  <button type="button" class="left-arrow">&lt;</button>
+                  <div class="right-section">
+                    <ul class="list" id="unitOfMeasurements" aria-multiselectable="true">
+                    </ul>
+                  </div>
+                </div>
+</body>
+</html>
