@@ -292,6 +292,7 @@ $(()=>{
     // Allow clicking on dropdown items
     $(document).on('click', '.dropDownItem', function() {
         clearCustomerForm();
+        $("#item-table-content th")
         $("#item-table-content").show();
         var customerName=$(this).text();
         var customerData=model.customers.find(customer=>customer.name===customerName);
