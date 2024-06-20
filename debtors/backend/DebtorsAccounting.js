@@ -5,7 +5,7 @@ const managers=require('c:/shahrukh/jqexpress/debtors/datalayer/managers.js');
 const entities=require('c:/shahrukh/jqexpress/debtors/datalayer/entities.js');
 
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static("../frontend/public"));
 app.get("/",function(request,response){
 response.redirect("/index.html");
 });
