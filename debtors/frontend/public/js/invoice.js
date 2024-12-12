@@ -77,7 +77,7 @@ const getByItemCode=(code)=>{
 }
 const getUnitOfMeasurements=()=>{
     var promise=new Promise((resolve,reject)=>{
-        fetch("/getUnitOfMeasurements").then((response)=>{
+        fetch("/getUoms").then((response)=>{
             if(!response.ok) return;
             return response.json();
         }).then((unitOfMeasurements)=>{

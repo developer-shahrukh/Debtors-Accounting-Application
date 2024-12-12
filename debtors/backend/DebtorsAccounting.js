@@ -1,6 +1,6 @@
 const express=require('express');
 const app=express();
-const port=3000;
+const port=8080;
 const managers=require('c:/shahrukh/jqexpress/debtors/datalayer/managers.js');
 const entities=require('c:/shahrukh/jqexpress/debtors/datalayer/entities.js');
 
@@ -23,7 +23,7 @@ app.get("/getItems",async function(request,response)
     }
     });
 
-app.get("/getUnitOfMeasurements",async function(request,response){
+app.get("/getUoms",async function(request,response){
     try
     {
         var m=new managers.UnitOfMeasurementManager();
@@ -187,7 +187,8 @@ app.post("/addItem",async function(request,response){
         var item=new entities.Item(code,name,hsnCode,cgst,sgst,igst,unitOfMeasurements);
         await m.add(item);
         var itemCode=item.code;
-        //console.log(`Item Added with code ${code}`);
+        console.log(item);
+        console.log(`Item Added with code ${itemCode}`);
         response.send({"success":true,"itemCode":itemCode});
     }catch(error)
     {
@@ -289,7 +290,7 @@ app.post("/updateCustomer",async function(request,response){
     }
 });
 
-app.get("/removeCustomer",async function(request,response){
+app.get("/deleteCustomer",async function(request,response){
     try
     {
         var name=request.query.name;

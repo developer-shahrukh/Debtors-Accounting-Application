@@ -81,7 +81,7 @@ const deleteItemByCode=(code)=>{
  
 const getUnitOfMeasurements=()=>{
   var promise=new Promise((resolve,reject)=>{
-    fetch("/getUnitOfMeasurements").then((response)=>{
+    fetch("/getUoms").then((response)=>{
         return response.json();
       }).then((unitOfMeasurements)=>{
         resolve(unitOfMeasurements);
